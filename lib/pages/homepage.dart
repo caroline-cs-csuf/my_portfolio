@@ -1,14 +1,14 @@
-//import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
 import 'package:my_portfolio/constants/size.dart';
-import 'package:my_portfolio/constants/skill_items.dart';
+import 'package:my_portfolio/utils/project_utils.dart';
 import 'package:my_portfolio/widgets/drawer_mobile.dart';
 import 'package:my_portfolio/widgets/header_desktop.dart';
 import 'package:my_portfolio/widgets/header_mobile.dart';
 import 'package:my_portfolio/widgets/main_desktop.dart';
 import 'package:my_portfolio/widgets/main_mobile.dart';
+import 'package:my_portfolio/widgets/project_card.dart';
+import 'package:my_portfolio/widgets/projects_section.dart';
 import 'package:my_portfolio/widgets/skills_desktop.dart';
 import 'package:my_portfolio/widgets/skills_mobile.dart';
 
@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
-    final screenHeight = screenSize.height;
+    //final screenHeight = screenSize.height;
 
     return LayoutBuilder(builder: (context, Constraints) {
       return Scaffold(
@@ -84,46 +84,12 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 30,
+            ),
 
             // Projects
-            Container(
-              padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
-              width: screenWidth,
-              child: Column(
-                children: [
-                  //projects title
-                  const Text(
-                    "Projects",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: CustomColor.whitePrimary,
-                    ),
-                  ),
-
-                  // projects cards
-                  Container(
-                    clipBehavior: Clip.antiAlias,
-                    height: 280,
-                    width: 250,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: CustomColor.bgLight2,
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          "assets/projects/project1.png",
-                          // height: 140,
-                          // width: 150,
-                          fit: BoxFit.cover,
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+            const ProjectsSection(),
             // Contact
             Container(
               height: 500,

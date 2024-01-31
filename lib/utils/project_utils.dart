@@ -19,20 +19,20 @@ List<ProjectUtils> hobbyProjectUtils = [
     title: 'Habit-tracking App',
     subtitle:
         'This is an iOS app for people who would like to track their habits.',
-    webLink: '',
+    webLink: 'https://github.com/carolineh-csuf/Habit-tracking',
   ),
   ProjectUtils(
     image: 'assets/projects/project2',
     title: 'Battleship App',
     subtitle: 'This is an iOS version of Battleship Game with an AI opponent.',
-    webLink: '',
+    webLink: 'https://github.com/carolineh-csuf/BattleShip_CarolineHa',
   ),
   ProjectUtils(
     image: 'assets/projects/project3',
     title: 'PhotoRama App',
     subtitle:
         'This is an iOS app for an filker-sychonized photo collection lover.',
-    webLink: '',
+    webLink: 'https://github.com/carolineh-csuf/Photorama',
   ),
   ProjectUtils(
     image: 'assets/projects/project4',
