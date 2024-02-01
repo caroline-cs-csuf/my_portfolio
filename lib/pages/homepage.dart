@@ -5,6 +5,7 @@ import 'package:my_portfolio/constants/sns_links.dart';
 import 'package:my_portfolio/utils/project_utils.dart';
 import 'package:my_portfolio/widgets/contact_section.dart';
 import 'package:my_portfolio/widgets/custom_text_filed.dart';
+import 'package:my_portfolio/widgets/download_section.dart';
 import 'package:my_portfolio/widgets/drawer_mobile.dart';
 import 'package:my_portfolio/widgets/footer.dart';
 import 'package:my_portfolio/widgets/header_desktop.dart';
@@ -124,6 +125,10 @@ class _HomePageState extends State<HomePage> {
                 key: navBarKeys[3],
               ),
               const SizedBox(height: 30),
+
+              // Download Resume Section
+              DownloadSection(),
+              const SizedBox(height: 20),
 
               // Footer
               const Footer(),
