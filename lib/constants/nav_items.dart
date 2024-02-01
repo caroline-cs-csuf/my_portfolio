@@ -4,8 +4,8 @@ List<String> navTitles = [
   "Home",
   "Skills",
   "Projects",
-  "Blog",
   "Contact",
+  "Blog",
 ];
 
 List<IconData> navIcons = [
