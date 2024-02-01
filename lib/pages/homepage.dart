@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
 
     final key = navBarKeys[navIndex];
     Scrollable.ensureVisible(
-      context,
+      key.currentContext!,
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOut,
     );
