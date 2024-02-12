@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "firebase": "^10.7.2"
+    "firebase": "^10.7.2",
+    "mailer": "^0.6.7"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.14"
   }
 }

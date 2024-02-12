@@ -1,12 +1,33 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+//import 'package:mailer/smtp_server/gmail.dart';
 import 'package:my_portfolio/constants/colors.dart';
 import 'package:my_portfolio/constants/size.dart';
 import 'package:my_portfolio/widgets/custom_text_filed.dart';
 import 'package:universal_html/js.dart' as js;
 import 'package:my_portfolio/constants/sns_links.dart';
+//import 'package:mailer/mailer.dart';
+import 'package:http/http.dart' as http;
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
+
+  void sendEmail() async {
+    try {
+      final response = await http.post(
+        Uri.parse(
+            'http://localhost:3000/send-email'), // Replace with your mock server URL
+      );
+      if (response.statusCode == 200) {
+        print('Email sent successfully');
+      } else {
+        print('Failed to send email: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('Error sending email: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +85,8 @@ class ContactSection extends StatelessWidget {
             child: SizedBox(
               width: double.maxFinite,
               child: ElevatedButton(
-                onPressed: () {},
+                //onPressed: () {},
+                onPressed: sendEmail,
                 child: const Text("Get in touch"),
               ),
             ),

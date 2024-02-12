@@ -9,5 +9,14 @@
     "frameworksBackend": {
       "region": "us-west1"
     }
+  },
+  "emulators": {
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
   }
 }
