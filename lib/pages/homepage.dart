@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
 import 'package:my_portfolio/constants/size.dart';
-import 'package:my_portfolio/constants/Sns_links.dart';
-import 'package:my_portfolio/utils/project_utils.dart';
+import 'package:my_portfolio/constants/sns_links.dart';
 import 'package:my_portfolio/widgets/contact_section.dart';
-import 'package:my_portfolio/widgets/custom_text_filed.dart';
 import 'package:my_portfolio/widgets/download_section.dart';
 import 'package:my_portfolio/widgets/drawer_mobile.dart';
 import 'package:my_portfolio/widgets/footer.dart';
@@ -12,12 +10,10 @@ import 'package:my_portfolio/widgets/header_desktop.dart';
 import 'package:my_portfolio/widgets/header_mobile.dart';
 import 'package:my_portfolio/widgets/main_desktop.dart';
 import 'package:my_portfolio/widgets/main_mobile.dart';
-import 'package:my_portfolio/widgets/project_card.dart';
 import 'package:my_portfolio/widgets/projects_section.dart';
 import 'package:my_portfolio/widgets/skills_desktop.dart';
 import 'package:my_portfolio/widgets/skills_mobile.dart';
-//import 'dart:js' as js;
-//import 'package:js/js.dart' as js; // not sure whether correct or not.
+import 'package:universal_html/js.dart' as js;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -143,8 +139,7 @@ class _HomePageState extends State<HomePage> {
   void scrollToSection(int navIndex) {
     if (navIndex == 4) {
       // open a blog page
-      //js.context.callMethod('open', [SnsLinks.blog]);
-
+      js.context.callMethod('open', [SnsLinks.blog]);
       return;
     }
 

@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
 import 'package:my_portfolio/constants/size.dart';
 import 'package:my_portfolio/widgets/custom_text_filed.dart';
-//import 'package:my_portfolio/constants/Sns_links.dart';
-
-//import 'dart:js' as js;
+import 'package:universal_html/js.dart' as js;
+import 'package:my_portfolio/constants/sns_links.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
@@ -86,7 +85,7 @@ class ContactSection extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  //js.context.callMethod('open', [SnsLinks.facebook]);
+                  js.context.callMethod('open', [SnsLinks.facebook]);
                 },
                 child: Image.asset(
                   "assets/facebook.png",
@@ -95,7 +94,7 @@ class ContactSection extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  //js.context.callMethod('open', [SnsLinks.github]);
+                  js.context.callMethod('open', [SnsLinks.github]);
                 },
                 child: Image.asset(
                   "assets/github.png",
@@ -104,7 +103,7 @@ class ContactSection extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  //js.context.callMethod('open', [SnsLinks.instagram]);
+                  js.context.callMethod('open', [SnsLinks.instagram]);
                 },
                 child: Image.asset(
                   "assets/instagram.png",
@@ -113,7 +112,7 @@ class ContactSection extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  //js.context.callMethod('open', [SnsLinks.linkedin]);
+                  js.context.callMethod('open', [SnsLinks.linkedIn]);
                 },
                 child: Image.asset(
                   "assets/linkedin.png",

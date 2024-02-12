@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
 import 'package:my_portfolio/utils/project_utils.dart';
-// //import 'dart:js' as js;
+//import 'dart:js' as js;
+import 'package:universal_html/js.dart' as js;
 
 class ProjectCardWidget extends StatelessWidget {
   const ProjectCardWidget({
@@ -72,7 +73,7 @@ class ProjectCardWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 6),
                     child: InkWell(
                       onTap: () {
-                        //js.context.callMethod("open", [project.webLink]);
+                        js.context.callMethod("open", [project.webLink]);
                       },
                       child: Image.asset(
                         "assets/github.png",
