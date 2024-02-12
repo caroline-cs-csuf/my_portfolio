@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
 import 'package:my_portfolio/constants/size.dart';
 import 'package:my_portfolio/widgets/custom_text_filed.dart';
+//import 'package:my_portfolio/constants/Sns_links.dart';
 
 //import 'dart:js' as js;
 
@@ -88,7 +89,7 @@ class ContactSection extends StatelessWidget {
                   //js.context.callMethod('open', [SnsLinks.facebook]);
                 },
                 child: Image.asset(
-                  "facebook.png",
+                  "assets/facebook.png",
                   width: 28,
                 ),
               ),
@@ -97,7 +98,7 @@ class ContactSection extends StatelessWidget {
                   //js.context.callMethod('open', [SnsLinks.github]);
                 },
                 child: Image.asset(
-                  "github.png",
+                  "assets/github.png",
                   width: 28,
                 ),
               ),
@@ -106,7 +107,7 @@ class ContactSection extends StatelessWidget {
                   //js.context.callMethod('open', [SnsLinks.instagram]);
                 },
                 child: Image.asset(
-                  "instagram.png",
+                  "assets/instagram.png",
                   width: 28,
                 ),
               ),
@@ -115,7 +116,7 @@ class ContactSection extends StatelessWidget {
                   //js.context.callMethod('open', [SnsLinks.linkedin]);
                 },
                 child: Image.asset(
-                  "linkedin.png",
+                  "assets/linkedin.png",
                   width: 28,
                 ),
               ),

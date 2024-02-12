@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
 import 'package:my_portfolio/constants/size.dart';
-import 'package:my_portfolio/constants/sns_links.dart';
+import 'package:my_portfolio/constants/Sns_links.dart';
 import 'package:my_portfolio/utils/project_utils.dart';
 import 'package:my_portfolio/widgets/contact_section.dart';
 import 'package:my_portfolio/widgets/custom_text_filed.dart';
@@ -17,6 +17,7 @@ import 'package:my_portfolio/widgets/projects_section.dart';
 import 'package:my_portfolio/widgets/skills_desktop.dart';
 import 'package:my_portfolio/widgets/skills_mobile.dart';
 //import 'dart:js' as js;
+//import 'package:js/js.dart' as js; // not sure whether correct or not.
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -143,6 +144,7 @@ class _HomePageState extends State<HomePage> {
     if (navIndex == 4) {
       // open a blog page
       //js.context.callMethod('open', [SnsLinks.blog]);
+
       return;
     }
 
