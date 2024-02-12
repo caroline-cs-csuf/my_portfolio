@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
+import 'dart:io';
 
 class DownloadSection extends StatelessWidget {
   const DownloadSection({super.key});
@@ -22,28 +24,22 @@ class DownloadSection extends StatelessWidget {
     );
   }
 
-  // Function to download and open the resume URL
-  void downloadResume(String resumeUrl) async {
-    if (await canLaunch(resumeUrl)) {
-      await launch(resumeUrl);
-    } else {
-      // Handle the error if the URL can't be launched
-      print('Could not launch $resumeUrl');
+  Future<void> downloadResume(String downloadUrl) async {
+    try {
+      // Send HTTP GET request to download the file
+      var response = await http.get(Uri.parse(downloadUrl));
+
+      // Get the directory for saving the downloaded file
+      Directory directory = await getApplicationDocumentsDirectory();
+      String filePath = '${directory.path}/resume.pdf';
+
+      // Write the response body to the file
+      File file = File(filePath);
+      await file.writeAsBytes(response.bodyBytes);
+
+      print('File downloaded successfully to: $filePath');
+    } catch (e) {
+      print('Error downloading file: $e');
     }
   }
-//   void downloadResume(String resumeUrl) async {
-// if (await canLaunch(resumeUrl)) {
-//       await launch(resumeUrl);
-//     } else {
-//       // Handle the error if the URL can't be launched
-//       print('Could not launch $resumeUrl');
-//     }
-//   }
-
-  // Placeholder function for launch
-  // void launch(String url) {
-  //   // You can use the url_launcher package or any other method to handle the download
-  //   // For simplicity, I'm printing the URL here
-  //   print('Launching URL: $url');
-  // }
 }
