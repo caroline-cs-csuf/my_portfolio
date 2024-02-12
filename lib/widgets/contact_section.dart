@@ -11,16 +11,41 @@ import 'package:my_portfolio/constants/sns_links.dart';
 import 'package:http/http.dart' as http;
 
 class ContactSection extends StatelessWidget {
-  const ContactSection({super.key});
+  ContactSection({super.key});
+
+  final nameController = TextEditingController();
+  final emailController = TextEditingController();
+  final messageController = TextEditingController();
 
   void sendEmail() async {
+    final name = nameController.text;
+    final email = emailController.text;
+    final message = messageController.text;
+
+    // Create a JSON object with the variables
+    Map<String, dynamic> jsonBody = {
+      'name': name,
+      'email': email,
+      'message': message,
+    };
+
     try {
+      // 将JSON主体转换为字符串
+      String jsonString = jsonEncode(jsonBody);
+
       final response = await http.post(
         Uri.parse(
             'http://localhost:3000/send-email'), // Replace with your mock server URL
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonString,
       );
       if (response.statusCode == 200) {
         print('Email sent successfully');
+        print('Name: $name');
+        print('Email: $email');
+        print('Message: $message');
       } else {
         print('Failed to send email: ${response.statusCode}');
       }
@@ -71,6 +96,7 @@ class ContactSection extends StatelessWidget {
               maxWidth: 700,
             ),
             child: CustomTextField(
+              controller: messageController,
               hintText: "Your message",
               maxLines: 16,
             ),
@@ -154,6 +180,7 @@ class ContactSection extends StatelessWidget {
         //name
         Flexible(
           child: CustomTextField(
+            controller: nameController,
             hintText: "Your name",
           ),
         ),
@@ -161,6 +188,7 @@ class ContactSection extends StatelessWidget {
         //email
         Flexible(
           child: CustomTextField(
+            controller: emailController,
             hintText: "Your email",
           ),
         ),
@@ -174,6 +202,7 @@ class ContactSection extends StatelessWidget {
         //name
         Flexible(
           child: CustomTextField(
+            controller: nameController,
             hintText: "Your name",
           ),
         ),
@@ -181,6 +210,7 @@ class ContactSection extends StatelessWidget {
         //email
         Flexible(
           child: CustomTextField(
+            controller: emailController,
             hintText: "Your email",
           ),
         ),
