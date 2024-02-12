@@ -1,4 +1,7 @@
-{
+{ 
+  "scripts": {
+   "build": "flutter build web"
+  },
   "dependencies": {
     "firebase": "^10.7.2",
     "mailer": "^0.6.7"
