@@ -1,6 +1,6 @@
 { 
   "scripts": {
-   "build": "/Users/carolineha/Documents/development/flutter/bin/flutter build web"
+   "build": "flutter build web"
   },
   "dependencies": {
     "firebase": "^10.7.2",
