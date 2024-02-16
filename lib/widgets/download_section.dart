@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-//import 'package:path_provider/path_provider.dart';
 import 'dart:io' as io;
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
-//import 'dart:html' as html;
 import 'package:universal_html/html.dart' as html;
 
 //import 'package:universal_html/html.dart';
@@ -18,7 +16,6 @@ class DownloadSection extends StatelessWidget {
         // Download Resume Section
         ElevatedButton(
       onPressed: () {
-        // Replace 'your_resume_url.pdf' with the actual URL or file path of your resume
         // For simplicity, I'm using a placeholder URL here
         String resumeUrl =
             'https://docs.google.com/document/d/1hQVuqa2BjCXL6UvfIfUallCC0C2Ua0oH5atKlKVp5AY/edit#heading=h.y7d3xdxnr44m.pdf';

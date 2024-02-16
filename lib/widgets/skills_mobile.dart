@@ -35,6 +35,7 @@ class SkillsMobile extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
+
           // skills
           Wrap(
             spacing: 10.0,

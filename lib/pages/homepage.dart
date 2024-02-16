@@ -3,7 +3,7 @@ import 'package:my_portfolio/constants/colors.dart';
 import 'package:my_portfolio/constants/size.dart';
 import 'package:my_portfolio/constants/sns_links.dart';
 import 'package:my_portfolio/widgets/contact_section.dart';
-import 'package:my_portfolio/widgets/download_section.dart';
+//import 'package:my_portfolio/widgets/download_section.dart';
 import 'package:my_portfolio/widgets/drawer_mobile.dart';
 import 'package:my_portfolio/widgets/footer.dart';
 import 'package:my_portfolio/widgets/header_desktop.dart';
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
               // SKILLS
               Container(
                 key: navBarKeys[1],
-                height: 500,
+                //height: 500,
                 width: screenWidth,
                 padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
                 color: CustomColor.bgLight1,
@@ -124,8 +124,8 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 30),
 
               // Download Resume Section
-              DownloadSection(),
-              const SizedBox(height: 20),
+              // DownloadSection(),
+              // const SizedBox(height: 20),
 
               // Footer
               const Footer(),
