@@ -45,7 +45,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/carolineh-csuf/my_portfolio">
-    <img src="homepage.png" alt="Homepage" width="900" height="675">
+    <img src="homepage.png" alt="Homepage" style="max-width:100%; max-height:100%;">
   </a>
   </p>
 </div>
