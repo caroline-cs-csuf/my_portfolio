@@ -126,32 +126,32 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 This is the Server code designed run on the localhost for mocking email receiving.
 
-const express = require('express');
-const app = express();
-const PORT = 3000;
+	const express = require('express');
+	const app = express();
+	const PORT = 3000;
 
-// Middleware to parse JSON bodies
-app.use(express.json());
+	// Middleware to parse JSON bodies
+	app.use(express.json());
 
-app.post('/send-email', (req, res) => {
-    // Simulate sending email (replace with actual logic)
-    // Print the body received from the client
-    console.log('Received body:', req.body);
+	app.post('/send-email', (req, res) => {
+	    // Simulate sending email (replace with actual logic)
+	    // Print the body received from the client
+	    console.log('Received body:', req.body);
 
-    // Extract name, email, and message from the request body
-    const { name, email, message } = req.body;
+	    // Extract name, email, and message from the request body
+	    const { name, email, message } = req.body;
 
-    // Print name, email, and message
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
-    console.log('Email sent successfully');
+	    // Print name, email, and message
+	    console.log('Name:', name);
+	    console.log('Email:', email);
+	    console.log('Message:', message);
+	    console.log('Email sent successfully');
 
-    res.sendStatus(200);
-});
+	    res.sendStatus(200);
+	});
 
-app.listen(PORT, () => {
-    console.log(`Portofolio Mock email server is running on http://localhost:${PORT}`);
-});
+	app.listen(PORT, () => {
+	    console.log(`Portofolio Mock email server is running on http://localhost:${PORT}`);
+	});
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
