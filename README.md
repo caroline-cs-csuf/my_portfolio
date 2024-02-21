@@ -45,7 +45,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/carolineh-csuf/my_portfolio">
-    <img src="homepage.png" alt="Homepage" width="1200" height="900">
+    <img src="homepage.png" alt="Homepage" width="900" height="675">
   </a>
   </p>
 </div>
@@ -89,6 +89,8 @@ This section lists the major frameworks used to bootstrap my project.
 ## Getting Started
 
 This is the deployed link for my project - https://myportfolio-ch.web.app/
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- DEVELOPMENT METHOD -->
