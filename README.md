@@ -90,7 +90,12 @@ This section lists the major frameworks used to bootstrap my project.
 
 This is the deployed link for my project - https://myportfolio-ch.web.app/
 
+Software Requirements Specification (SRS) - https://docs.google.com/document/d/1z6vc7L7cltDPaLhMXKYqcHVDdlabEN3-/edit?usp=drive_link&ouid=115565329960495155919&rtpof=true&sd=true
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 <!-- DEVELOPMENT METHOD -->
